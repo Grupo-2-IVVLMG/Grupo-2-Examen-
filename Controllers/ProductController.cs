@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PrimerParcialProgra.Data;
-using PrimerParcialProgra.Models;
+using ExamenParcial.Data;
+using ExamenParcial.Models;
 
-namespace PrimerParcialProgra.Controllers
+namespace ExamenParcial.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -41,6 +41,7 @@ namespace PrimerParcialProgra.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
+            product.CreatedAt = DateTime.UtcNow; // registra fecha de creación
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
@@ -56,6 +57,7 @@ namespace PrimerParcialProgra.Controllers
                 return BadRequest();
             }
 
+            product.UpdatedAt = DateTime.UtcNow; // registra última actualización
             _context.Entry(product).State = EntityState.Modified;
 
             try
