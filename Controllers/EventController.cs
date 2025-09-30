@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ExamenParcial.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PrimerParcialProgra.Data;
+using ExamenParcial.Data;
 using PrimerParcialProgra.Models;
 
 namespace PrimerParcialProgra.Controllers;

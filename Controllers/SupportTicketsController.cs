@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ExamenParcial.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PrimerParcialProgra.Data;     // Para usar AppDbContext
+     // Para usar AppDbContext
 using PrimerParcialProgra.Models;   // Para usar SupportTicket
 
 namespace PrimerParcialProgra.Controllers

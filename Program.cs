@@ -1,5 +1,6 @@
+using ExamenParcial.Data;
 using Microsoft.EntityFrameworkCore;
-using PrimerParcialProgra.Data;
+using ExamenParcial.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

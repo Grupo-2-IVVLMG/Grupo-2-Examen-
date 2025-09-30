@@ -1,9 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ExamenParcial.Models;
 using PrimerParcialProgra.Models;
 
-namespace PrimerParcialProgra.Data;
-
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+namespace ExamenParcial.Data
 {
-    public DbSet<Event> Events => Set<Event>();
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<SupportTicket> SupportTickets { get; set; }
+    }
 }
